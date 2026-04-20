@@ -100,11 +100,11 @@ TEST_CASE("Matrix Arithmetic and Logic", "[matrix][math]") {
     }
 
     SECTION("Division") {
-        auto res_div = a / 1;
-        CHECK(res_div(0,0) == 1);
+        auto res_div = c / 1;
+        CHECK(res_div(0,0) == 4);
         
         c /= 2;
-        CHECK(a(0,0) == 2);
+        CHECK(c(0,0) == 2);
     }
 
     SECTION("Scalar Operations") {
