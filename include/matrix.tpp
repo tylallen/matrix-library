@@ -173,11 +173,29 @@ Matrix<T> Matrix<T>::operator* (const Matrix<T>& other) const
     return result;
 }
 
-// TODO: Implement scalar division.
+// --- Division ---
+
+template <typename T> 
+Matrix<T>& Matrix<T>::operator/= (const T& scalar)
+{
+    for (auto& element : _data)
+    {
+        element /= scalar;
+    }
+    return *this;
+}
+
+template <typename T> 
+Matrix<T> Matrix<T>::operator/(const T& scalar) const
+{
+    Matrix<T> result(*this);
+    result /= scalar;
+    return result;
+}
 
 // --- Getters and Attributes ---
 
-template <typename T> 
+template <typename T>
 bool Matrix<T>::isSquare () const noexcept
 { 
     return (_rows == _columns);

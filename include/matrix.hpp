@@ -133,6 +133,22 @@ class Matrix
         Matrix<T>
         operator* (const Matrix<T>& other) const;
 
+        /**
+         * @brief Divides all elements in a matrix by scalar value.
+         * @param scalar 
+         * @return Matrix<T> 
+         */
+        Matrix<T>
+        operator/= (const T& scalar);
+
+        /**
+         * @brief Divides all elements in a matrix by scalar value.
+         * @param scalar 
+         * @return Matrix<T> 
+         */
+        Matrix<T>
+        operator/ (const T& scalar) const;
+
         /** @brief Returns true if matrix is valid square matrix or false otherwise. */
         bool 
         isSquare () const noexcept;

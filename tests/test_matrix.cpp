@@ -82,6 +82,7 @@ TEST_CASE("Matrix Access and Bounds Safety", "[matrix][access]") {
 TEST_CASE("Matrix Arithmetic and Logic", "[matrix][math]") {
     Matrix<int> a(2, 2, 1);
     Matrix<int> b(2, 2, 2);
+    Matrix<int> c(2, 2, 4);
 
     SECTION("Addition & Subtraction") {
         auto res_add = a + b;
@@ -96,6 +97,14 @@ TEST_CASE("Matrix Arithmetic and Logic", "[matrix][math]") {
         // Dimension Mismatch
         Matrix<int> wrong_size(3, 3);
         CHECK_THROWS_AS(a + wrong_size, std::invalid_argument);
+    }
+
+    SECTION("Division") {
+        auto res_div = a / 1;
+        CHECK(res_add(0,0) == 1);
+        
+        c /= 2;
+        CHECK(a(0,0) == 2);
     }
 
     SECTION("Scalar Operations") {
