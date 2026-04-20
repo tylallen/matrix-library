@@ -138,7 +138,7 @@ class Matrix
          * @param scalar 
          * @return Matrix<T> 
          */
-        Matrix<T>
+        Matrix<T>&
         operator/= (const T& scalar);
 
         /**
