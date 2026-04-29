@@ -16,7 +16,7 @@
 // --- Constructors ---
 
 template <typename T>
-Matrix<T>::Matrix (size_t rowCount, size_t columnCount, const T& value)
+Matrix<T>::Matrix (const size_t& rowCount, const size_t& columnCount, const T& value)
     : _rows(rowCount),
       _columns(columnCount),
       _data(rowCount * columnCount, value)
@@ -28,6 +28,14 @@ Matrix<T>::Matrix (const Matrix<T>& matrix)
     : _rows(matrix.rows ()),
       _columns(matrix.columns ()),
       _data(matrix._data)
+{
+}
+
+template <typename T>
+Matrix<T>::Matrix (const size_t& rowCount, const size_t& columnCount, const std::vector<T> v)
+    : _rows(rowCount),
+      _columns(columnCount),
+      _data(v)
 {
 }
 
@@ -294,9 +302,34 @@ void Matrix<T>::clear () noexcept
 template <typename T> 
 void Matrix<T>::resize (const size_t& rows, const size_t& cols, const T& value)
 {
+    _data.reserve (rows * cols);
     _data.resize (rows * cols, value);
     _rows = rows;
     _columns = cols;
+}
+
+template <typename T>
+Matrix<T> Matrix<T>::slice (const size_t& x1, const size_t& x2, const size_t& y1, const size_t& y2)
+{
+    if (x2 <= x1 || y2 <= y1 || x2 > _rows || y2 > _columns)
+    {
+        throw std::out_of_range ("Invalid slice bounds.");
+    }
+
+    size_t newRows = x2 - x1;
+    size_t newCols = y2 - y1;
+    std::vector<T> subVector;
+    subVector.reserve (newRows * newCols);
+
+    for (size_t r = x1; r < x2; r++) 
+    {
+        for (size_t c = y1; c < y2; c++)
+        {
+            subVector.push_back (_data[r * _columns + c]);
+        }
+    }
+
+    return Matrix<T> (newRows, newCols, subVector);
 }
 
 // TODO: Add more operations such as discriminant.

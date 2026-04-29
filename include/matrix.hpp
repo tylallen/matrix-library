@@ -33,7 +33,9 @@ class Matrix
         using const_iterator = typename std::vector<value_type>::const_iterator;
 
         /** @brief Creates a matrix of size rowCount x columnCount filled with value. Defaults to 0x0 with T() if no parameters given.*/
-        Matrix (size_t rowCount=0, size_t columnCount=0, const T& value = T ());
+        Matrix (const size_t& rowCount=0, const size_t& columnCount=0, const T& value = T ());
+        /** @brief Construct a new matrix using a vector. */
+        Matrix (const size_t& rowCount, const size_t& columnCount, const std::vector<T> v);
         /** @brief Copy constructor. Performs a deep copy of another matrix. */
         Matrix (const Matrix<T>& matrix);
         /** @brief Move constructor. Transfers ownership to a new matrix. */
@@ -211,6 +213,17 @@ class Matrix
          */
         void
         resize (const size_t& rows, const size_t& cols, const T& value = T ());
+
+        /**
+         * @brief Returns a submatrix from (x1, x2, y1, y2).
+         * @param x1
+         * @param x2 
+         * @param y1 
+         * @param y2 
+         * @return Matrix<T>
+         */
+        Matrix<T>
+        slice (const size_t& x1, const size_t& x2, const size_t& y1, const size_t& y2);
 
         /**
          * @brief Returns an ostream for printing matrix in readable format.

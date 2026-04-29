@@ -1,5 +1,6 @@
 # Compiled binaries
-run_tests
+test_library
+gof_demo
 matrix_app
 *.o
 *.exe
