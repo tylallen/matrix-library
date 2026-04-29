@@ -33,8 +33,8 @@ int main()
 ## Testing
 * Download the additional files in tests/ and Makefile.
 * Run **make**
-* Run **./test_library**
-In addition, you can use the included gof.cpp for a working demo.
+* Run **./test_library***
+* In addition, you can use the included gof.cpp for a working demo:
 * Run **make gof_demo**
 * Run **./gof_demo <size> <layout>**
 
