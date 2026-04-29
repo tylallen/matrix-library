@@ -226,6 +226,14 @@ class Matrix
         slice (const size_t& x1, const size_t& x2, const size_t& y1, const size_t& y2);
 
         /**
+         * @brief Returns an identity matrix of size.
+         * @param size 
+         * @return Matrix<T>
+         */
+        static Matrix<T>
+        identity(const size_t& size);
+
+        /**
          * @brief Returns an ostream for printing matrix in readable format.
          * @tparam U Type of matrix elements.
          * @param os 

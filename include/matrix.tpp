@@ -332,6 +332,17 @@ Matrix<T> Matrix<T>::slice (const size_t& x1, const size_t& x2, const size_t& y1
     return Matrix<T> (newRows, newCols, subVector);
 }
 
+template <typename T>
+Matrix<T> Matrix<T>::identity (const size_t& size)
+{
+    Matrix<T> identityMatrix (size, size, 0);
+    for (size_t pos = 0; pos < size; ++pos)
+    {
+        identityMatrix (pos, pos) = 1;
+    }
+    return identityMatrix;
+}
+
 // TODO: Add more operations such as discriminant.
 
 // --- Operator Overrides ---
