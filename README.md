@@ -1,8 +1,8 @@
 # tyler-matrix Library
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit)
 ![C++](https://img.shields.io/badge/C%2B%2B-23-blue.svg?style=flat&logo=c%2B%2B)
-[![Documentation](https://img.shields.io/badge/docs-doxygen-blue)](https://AlgorithmProgrammer.github.io/tyler-matrix/)
-![C++ CI Build](https://github.com/AlgorithmProgrammer/tyler-matrix/actions/workflows/test.yml/badge.svg)
+[![Documentation](https://img.shields.io/badge/docs-doxygen-blue)](https://tylallen.github.io/tyler-matrix/)
+![C++ CI Build](https://github.com/tylallen/tyler-matrix/actions/workflows/test.yml/badge.svg)
 
 A high performance, header-only C++ math matrix library.
 
@@ -34,11 +34,13 @@ int main()
 * Download the additional files in tests/ and Makefile.
 * Run **make**
 * Run **./test_library**
+In addition, you can use the included gof.cpp for a working demo.
+* Run **make gof_demo**
+* Run **./gof_demo <size> <layout>**
 
-## AI Usage Summary
 **Artifical Intelligence was used in the following ways for this repository:**
 * Assisted in creation of Makefile, test.yml, docs.yml
-* Created test cases
+* Created some test cases
 
 ## Attributions and Licenses
 **This library is distributed with the MIT license:**
