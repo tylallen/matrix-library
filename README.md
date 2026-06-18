@@ -12,6 +12,7 @@ A high performance, header-only C++ math matrix library.
 
 ## Installation
 This is a **header-only** library. Simply copy `include/matrix.hpp` and `include/matrix.tpp` into your project's include directory.
+To generate the documentation, either use the existing `docs` folder, or generate it yourself by downloading the Doxyfile and using the `doxygen` command.
 
 ## Requirements
 * Must compile with at least the C++23 standard.
