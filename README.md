@@ -1,8 +1,6 @@
 # matrix-library Library
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/license/mit)
 ![C++](https://img.shields.io/badge/C%2B%2B-23-blue.svg?style=flat&logo=c%2B%2B)
-[![Documentation](https://img.shields.io/badge/docs-doxygen-blue)](https://tylallen.github.io/tyler-matrix/)
-![C++ CI Build](https://github.com/tylallen/tyler-matrix/actions/workflows/test.yml/badge.svg)
 
 A high performance, header-only C++ math matrix library.
 
@@ -47,4 +45,3 @@ int main()
 **[License Information](https://opensource.org/license/mit)**
 
 * **[Catch2](https://github.com/catchorg/Catch2):** Modern C++ testing framework.
-* **[Doxygen](https://www.doxygen.nl/):** Standard documentation generator for C++.
