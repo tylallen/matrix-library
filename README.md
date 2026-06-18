@@ -45,3 +45,4 @@ int main()
 **[License Information](https://opensource.org/license/mit)**
 
 * **[Catch2](https://github.com/catchorg/Catch2):** Modern C++ testing framework.
+* **[Doxygen] (https://www.doxygen.nl/):** Standard documentation generator for C++.
